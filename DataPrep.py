@@ -44,8 +44,6 @@ def create_distribution(dataFile):
 
 #by calling below we can see that training, test and valid data seems to be failry evenly distributed between the classes
 create_distribution(train_news)
-create_distribution(test_news)
-create_distribution(valid_news)
 
 
 #data integrity check (missing label values)
