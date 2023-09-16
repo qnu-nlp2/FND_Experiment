@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Note: before we can train an algorithm to classify fake news labels, we need to extract features from it. It means reducing the mass
-of unstructured data into some uniform set of attributes that an algorithm can understand. For fake news detection, it could be 
-word counts (bag of words). 
-"""
+
 import DataPrep
 import pandas as pd
 import numpy as np
