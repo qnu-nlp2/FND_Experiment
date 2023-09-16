@@ -90,10 +90,8 @@ def build_confusion_matrix(classifier):
     
 #K-fold cross validation for all classifiers
 build_confusion_matrix(nb_pipeline)
-build_confusion_matrix(logR_pipeline)
 build_confusion_matrix(svm_pipeline)
-build_confusion_matrix(sgd_pipeline)
-build_confusion_matrix(random_forest)
+build_confusion_matrix(knn_pipeline)
 
 #========================================================================================
 #Bag of words confusion matrix and F1 scores
@@ -106,7 +104,6 @@ build_confusion_matrix(random_forest)
 # [2260 2228]
 # [2246 3506]
 #f1-score: 0.910468748792
-
 #knn
 # [2414 2074]
 # [2042 3710]
@@ -310,11 +307,9 @@ def plot_learing_curve(pipeline,title):
 
 
 #below command will plot learing curves for each of the classifiers
-plot_learing_curve(logR_pipeline_ngram,"Naive-bayes Classifier")
-plot_learing_curve(nb_pipeline_ngram,"LogisticRegression Classifier")
+plot_learing_curve(nb_pipeline_ngram,"NB Classifier")
 plot_learing_curve(svm_pipeline_ngram,"SVM Classifier")
-plot_learing_curve(sgd_pipeline_ngram,"SGD Classifier")
-plot_learing_curve(random_forest_ngram,"RandomForest Classifier")
+plot_learing_curve(knn_pipeline_ngram,"kNN Classifier")
 
 """
 by plotting the learning cureve for logistic regression, it can be seen that cross-validation score is stagnating throughout and it 
@@ -399,7 +394,6 @@ def show_most_informative_features(model, vect, clf, text=None, n=50):
     #return "\n".join(output)
     print(output)
 
-show_most_informative_features(logR_pipeline_ngram,vect='LogR_tfidf',clf='LogR_clf')
 show_most_informative_features(nb_pipeline_ngram,vect='nb_tfidf',clf='nb_clf')
 show_most_informative_features(svm_pipeline_ngram,vect='svm_tfidf',clf='svm_clf')
-show_most_informative_features(sgd_pipeline_ngram,vect='sgd_tfidf',clf='sgd_clf')
+show_most_informative_features(knn_pipeline_ngram,vect='knn_tfidf',clf='knn_clf')
