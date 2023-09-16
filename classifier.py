@@ -10,7 +10,6 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import  LogisticRegression
 from sklearn.linear_model import SGDClassifier
 from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
