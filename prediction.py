@@ -3,7 +3,7 @@ import tkinter
 from tkinter import *
 
 window = Tk()
-window.configure(bg="light grey")
+window.configure(bg="light green")
 window.geometry("640x640")
 window.maxsize(640, 640)
 
@@ -75,7 +75,7 @@ label.pack()
 
 label1 = Label(window, textvariable=labelString1, bg='light grey')
 label1.config(font=("Courier", 15), fg='black')
-labelString1.set('Please Enter the News Text You want to Verify: ')
+labelString1.set('Please Enter the News You want to Verify: ')
 label1.pack()
 
 entry = Text(window, width = 50, height = 3)
